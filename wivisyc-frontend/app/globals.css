@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌈 Animated gradient background */
+body {
+  background: linear-gradient(-45deg, #e0f2fe, #f5f3ff, #ecfeff, #fdf2f8);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  @apply text-gray-800;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🧊 Glass effect */
+.glass-card {
+  @apply bg-white/70 backdrop-blur-xl border border-white/40 rounded-2xl shadow-xl;
+}
+
+/* ✨ Glow effect */
+.glow {
+  box-shadow: 0 10px 40px rgba(0, 120, 255, 0.2);
+}
+
+/* ✨ Button animation */
+.btn {
+  @apply px-5 py-2 rounded-xl transition transform;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
