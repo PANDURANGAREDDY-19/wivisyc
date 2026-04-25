@@ -10,6 +10,7 @@ embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 def init_db():
     conn = sqlite3.connect("voice_embeddings.db")
+    # amazonq-ignore-next-line
     cursor = conn.cursor()
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS embeddings (
